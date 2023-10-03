@@ -8,5 +8,9 @@ public interface Question {
 	 * 		you can configure the candidate answers, such as “A”, “B”, “C”, “D”, or “1. Right”, “2. Wrong”, etc.
 	 */
 
+	/*
+	 * Returns the body of the question, valid answers, and instructions for input
+	 */
+	public String display();
 }
 

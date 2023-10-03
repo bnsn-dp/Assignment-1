@@ -1,3 +1,4 @@
+import java.util.Scanner;
 public class SimulationDriver {
 	/*
 	 * You need a SimulationDriver to automatically simulate the whole process. 

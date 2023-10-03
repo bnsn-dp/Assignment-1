@@ -14,4 +14,7 @@ public interface VotingService {
 	 * 	“1. Right : 15, 2. Wrong : 20”. 
 	 * Feel free to customize the format for your output.
 	 */
+
+	 public void showTotal();
+	 public boolean verifyAnswer(Student bozo);
 }
