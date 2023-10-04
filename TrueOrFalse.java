@@ -1,12 +1,22 @@
 public class TrueOrFalse implements Question {
 	String body = "";
 	String answers = "-----\n0. False\n1.True\n------";
-	String instructions = "Choose one (Answer should be in the form \"0\")";
+	String instructions = "Choose one (Answer should be in the form \"0\" or \"1\")";
 
+	/*
+	 * Constructor
+	 * Takes a String body and assigns it to the body field or takes no parameter and calls QuestionBank.MC()
+	 */
+	public TrueOrFalse(){
+		this.body = QuestionBank.ToF();
+	}
+
+	public TrueOrFalse(String body){
+		this.body = body;
+	}
 	@Override
 	public String display() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'display'");
+		return (body + answers + instructions);
 	}
 	
 }
