@@ -1,11 +1,21 @@
 public class MultipleChoice implements Question {
 	String body = "";
-	String answers = "-----\nA.\nB.\nC.\nD.\n-----";
-	String instructions = "Choose one or more (Answers should be in the form \"ABCD\")";
+	String answers = "\n-----\nA.\nB.\nC.\nD.\n-----";
+	String instructions = "\nChoose one or more (Answers should be in the form \"ABCD\", case insensitive)";
 
+	/*
+	 * Constructor
+	 * Takes a String body and assigns it to the body field or takes no parameter and calls QuestionBank.MC()
+	 */
+	public MultipleChoice(){
+		this.body = QuestionBank.MC();
+	}
+
+	public MultipleChoice(String body){
+		this.body = body;
+	}
 	@Override
 	public String display() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'display'");
+		return (body + answers + instructions);
 	}
 }
