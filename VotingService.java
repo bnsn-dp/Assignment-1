@@ -15,6 +15,7 @@ public interface VotingService {
 	 * Feel free to customize the format for your output.
 	 */
 
-	 public void showTotal();
-	 public boolean verifyAnswer(Student bozo);
+	public void showQuestion();
+	public void showTotal();
+	public boolean verifyAnswer(Student bozo);
 }
