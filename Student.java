@@ -9,6 +9,7 @@ public class Student {
 
 	/*
 	 * Creates a student object for future reference.
+	 * Takes a String ID Parameter
 	 */
 	public Student(String ID){
 		this.ID = ID;
@@ -25,6 +26,12 @@ public class Student {
 	 * One variant takes a String parameter and the other asks for user input.
 	 */
 	public void setAttempt(){
+		Scanner input = new Scanner(System.in);
+		attempt = input.nextLine();
+	}
+
+	public void setAttempt(String attempt){
+		this.attempt = attempt;
 	}
 
 	/*
