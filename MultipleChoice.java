@@ -1,6 +1,5 @@
 public class MultipleChoice implements Question {
 	String body = "";
-	String answers = "\n-----\nA.\nB.\nC.\nD.\n-----";
 	String instructions = "\nChoose one or more (Answers should be in the form \"ABCD\", case insensitive)";
 
 	/*
@@ -16,6 +15,6 @@ public class MultipleChoice implements Question {
 	}
 	@Override
 	public String display() {
-		return (body + answers + instructions);
+		return (body + instructions);
 	}
 }
