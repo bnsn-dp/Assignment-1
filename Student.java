@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.lang.Math;
 public class Student {
 	/*
 	 * 	Allow students to submit answers. Every student has a unique ID (String), and can
@@ -13,6 +14,13 @@ public class Student {
 	 */
 	public Student(String ID){
 		this.ID = ID;
+	}
+	public Student(){
+		String[] numberSpace = {"0", "1", "2", "3", "4", "5", "6", "7", "8", "9"};
+		for(int i = 0; i < 7; i++){
+			int digit = (int)(Math.random() * 10);
+			this.ID = ID + numberSpace[digit];
+		}
 	}
 
 	/*
