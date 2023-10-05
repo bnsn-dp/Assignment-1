@@ -17,7 +17,7 @@ public class ToFVotingService implements VotingService{
 	 */
 	@Override
 	public void showQuestion(){
-		query.display();
+		System.out.println(query.display());
 	}
 	/*
 	 * Iterates through answers variable to count 0s and 1s
@@ -34,7 +34,7 @@ public class ToFVotingService implements VotingService{
 				trues++;
 			}
 		}
-		System.out.println("False: " + falses + "| True: " + trues);
+		System.out.println("False: " + falses + " | True: " + trues);
 	}
 
 	/*
@@ -46,7 +46,7 @@ public class ToFVotingService implements VotingService{
 	@Override
 	public boolean verifyAnswer(Student bozo) {
 		int i = Integer.parseInt(bozo.getAttempt());
-		if(i != 1 || i != 0){
+		if(i != 1 && i != 0){
 			System.out.println(invalid);
 			return false;
 		}
