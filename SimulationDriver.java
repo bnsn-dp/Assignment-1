@@ -1,4 +1,5 @@
-import java.util.Scanner;
+import java.util.ArrayList;
+import java.lang.Math;
 public class SimulationDriver {
 	/*
 	 * You need a SimulationDriver to automatically simulate the whole process. 
@@ -14,6 +15,28 @@ public class SimulationDriver {
 	 */
 
 	public static void main(String[] args){
-
+		ArrayList<Student> students = new ArrayList<Student>();
+		int numStudents = (int)(Math.random() * 9) + 4;
+		TrueOrFalse q1 = new TrueOrFalse();
+		MultipleChoice q2 = new MultipleChoice();
+		ToFVotingService trueOrFalseExample = new ToFVotingService(q1);
+		MCVotingService multipleChoiceExample = new MCVotingService(q2);
+		
+		for(int i = 0; i < numStudents; i++){
+			Student temp = new Student();
+			students.add(temp);
+		}
+		trueOrFalseExample.showQuestion();
+		for(Student s : students){
+			s.setAttempt(RandomAnswer.trueOrFalseAnswer());
+			trueOrFalseExample.verifyAnswer(s);
+		}
+		trueOrFalseExample.showTotal();
+		multipleChoiceExample.showQuestion();
+		for(Student s : students){
+			s.setAttempt(RandomAnswer.multipleChoiceAnswer());
+			multipleChoiceExample.verifyAnswer(s);
+		}
+		multipleChoiceExample.showTotal();
 	}
 }
