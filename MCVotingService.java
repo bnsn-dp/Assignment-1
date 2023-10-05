@@ -3,7 +3,7 @@ import java.util.Arrays;
 import java.util.HashMap;
 public class MCVotingService implements VotingService{
 	Question query;
-	Map<String, String> answers;
+	Map<String, String> answers = new HashMap<String, String>();
 	String invalid = "Your answer contains letters that are not \"A, B, C, or D\"";
 	String[] validInputs = {"A", "B", "C", "D", "a", "b", "c", "d"};
 
@@ -19,7 +19,7 @@ public class MCVotingService implements VotingService{
 	 */
 	@Override
 	public void showQuestion(){
-		query.display();
+		System.out.println(query.display());
 	}
 
 	/*
